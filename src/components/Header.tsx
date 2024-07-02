@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const Header: FC = () => {
   return (
-    <header>
+    <header className="shadow-baseShadow">
       <NavBar />
     </header>
   );

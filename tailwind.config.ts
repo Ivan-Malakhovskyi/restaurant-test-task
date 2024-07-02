@@ -23,6 +23,12 @@ const config: Config = {
       black: "#000000",
       mainYellow: "rgb(252, 172, 69)",
       addBgColor: "#EDEDED",
+      accentBgColor: "rgba(0, 0, 0, 0.3)",
+      mainGrey: "#747474",
+    },
+    boxShadow: {
+      baseShadow: "0px 4px 8px 0px rgba(0, 0, 0, 0.25)",
+      inputShadow: "inset 0px 1px 4px 0px rgba(0, 0, 0, 0.3)",
     },
   },
   plugins: [],

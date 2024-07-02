@@ -13,12 +13,12 @@ const NavBar = () => {
         <li>
           <Link
             href="/"
-            className="font-Italianno text-[40px] font-normal ml-[32px] py-[15px]"
+            className="font-Italianno  text-[40px] font-normal ml-[32px] py-[15px] mr-[70px]"
           >
             <Image src={logo} width={200} height={50} alt="" />
           </Link>
         </li>
-        <li className="ml-auto">
+        <li className="ml-auto ">
           {" "}
           <nav>
             {" "}
