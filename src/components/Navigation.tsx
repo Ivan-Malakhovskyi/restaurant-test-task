@@ -68,55 +68,53 @@ const Navigation = () => {
 
       <div className="md:hidden">
         {" "}
-        <button type="button" className="ml-auto" onClick={handleToggleClick}>
+        <button type="button" onClick={handleToggleClick}>
           <Image src={icon} width={29} height={29} alt="" />{" "}
         </button>
         {showModal && (
-          <ModalWindow
-            onClose={handleToggleClick}
-                       maxwidth="302"
-            maxheight="633"
-          >
-            <ul className=" text-right mt-[60px] mb-[300px]">
-              {navigation.map(({ id, title, path }) => {
-                const isActive = pathName === path;
+          <ModalWindow onClose={handleToggleClick} maxwidth="302">
+            <div className="flex flex-col justify-between">
+              <ul className=" text-right mt-[60px] ">
+                {navigation.map(({ id, title, path }) => {
+                  const isActive = pathName === path;
 
-                return (
-                  <li key={id}>
-                    <Link
-                      href={path}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleLinkClick(path);
-                      }}
-                      className={`mb-5 text-lg font-normal  transition ease-out duration-300 ${
-                        isActive ? "text-mainYellow" : "text-black"
-                      }`}
-                    >
-                      {title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-
-            <div className="mx-[54px] ">
-              <p className="text-center mb-5 relative after:content-[''] after:block after:w-full after:h-[1px] after:bg-mainYellow after:mt-1">
-                Contacts
-              </p>
-
-              <a href="tel:+380 (77) 77 77 777" className="mb-5">
-                +380 (77) 77 77 777
-              </a>
-              <ul className="flex gap-[40px] flex-wrap justify-center items-center">
-                {socialList.map(({ id, icon }) => (
-                  <li key={id}>
-                    <Link href="/">
-                      <Image src={icon} width={20} height={20} alt="" />
-                    </Link>
-                  </li>
-                ))}
+                  return (
+                    <li key={id}>
+                      <Link
+                        href={path}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLinkClick(path);
+                        }}
+                        className={`mb-5 text-lg font-normal  transition ease-out duration-300 ${
+                          isActive ? "text-mainYellow" : "text-black"
+                        }`}
+                      >
+                        {title}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
+
+              <div className="mx-[54px] ">
+                <p className="text-center mb-5 relative after:content-[''] after:block after:w-full after:h-[1px] after:bg-mainYellow after:mt-1">
+                  Contacts
+                </p>
+
+                <a href="tel:+380 (77) 77 77 777" className="mb-5">
+                  +380 (77) 77 77 777
+                </a>
+                <ul className="flex gap-[40px] flex-wrap justify-center items-center">
+                  {socialList.map(({ id, icon }) => (
+                    <li key={id}>
+                      <Link href="/">
+                        <Image src={icon} width={20} height={20} alt="" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </ModalWindow>
         )}
