@@ -74,7 +74,8 @@ const Navigation = () => {
         {showModal && (
           <ModalWindow
             onClose={handleToggleClick}
-            height={100%}
+                       maxwidth="302"
+            maxheight="633"
           >
             <ul className=" text-right mt-[60px] mb-[300px]">
               {navigation.map(({ id, title, path }) => {
