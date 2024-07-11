@@ -7,8 +7,8 @@ import CloseButton from "./CloseButton";
 
 interface ModalProps {
   onClose: () => void;
-  maxwidth?: string | number;
-  maxheight?: string | number;
+  maxwidth?:  number;
+  maxheight?:  number;
   children: ReactNode;
 }
 
